@@ -1,0 +1,28 @@
+.menu-container {
+    width: 400px;
+    padding-top: 10px;
+}
+
+.button {
+    width: 120px;
+    margin-left: 5px;
+    line-height: 70px;
+}
+
+.action-container {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.center {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.text {
+    font-size: large;
+}
+
+.mt {
+    margin-top: 100px;
+}
