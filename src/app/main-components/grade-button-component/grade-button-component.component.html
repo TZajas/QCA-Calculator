@@ -1,18 +1,34 @@
-<div *ngIf="subjectCount==0" style="margin-top:100px ;" class="text-center center text lead">
-    Please select 5 grades 😊</div>
-<div *ngIf="subjectCount!=0" style="margin-top:100px ;" class="text-center center text lead">Subjects Count : {{subjectCount}}</div>
+<div *ngIf="subjectCount==0" class="mt text-center center text lead">Please select 5 grades 😊</div>
+
+<div *ngIf="subjectCount!=0" class="mt text-center center text lead">Subjects Count : {{subjectCount}}</div>
+
 <div *ngIf="subjectCount!=0" class="text-center center text lead">Subjects : {{subjects}}</div>
+
 <div *ngIf="subjectCount==5" class="text-center center text lead">Subject limit reached, please calculate ✔</div>
 
 <div *ngIf="subjectCount!=5" class="menu-container center">
     <div class="button-container text-center">
         <div class="action-container " *ngFor="let grade of UL_Grades ">
-            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade >= 3.2 " class="button btn btn-success text">{{grade.name}}</button>
-            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade < 3.2 && grade.grade >= 1.6" class="text button btn btn-warning">{{grade.name}}</button>
-            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade < 1.6" class="text button btn btn-danger">{{grade.name}}</button>
+            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade >= 3.2 " class="button btn btn-success text">
+              {{grade.name}}
+            </button>
+            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade < 3.2 && grade.grade >= 1.6" class="text button btn btn-warning">
+              {{grade.name}}
+            </button>
+            <button (click)="subjectIncrement(grade)" *ngIf="grade.grade < 1.6" class="text button btn btn-danger">
+              {{grade.name}}
+            </button>
         </div>
     </div>
 </div>
 
-<div style="margin-bottom: 200px;" class="text-center center"><button style="margin-right: 30px;" (click)="navToResultComponent()" class="btn btn-success">Calculate QCA</button>
-    <button (click)="reset()" class="btn btn-secondary">Reset</button>
+<div style="margin-bottom: 200px;" class="text-center center">
+    <button style="margin-right: 30px;" (click)="navToResultComponent()" class="btn btn-success">
+      Calculate QCA
+    </button>
+    <button (click)="reset()" class="btn btn-secondary">
+      Reset
+    </button>
+</div>
+
+<app-footer-component *ngIf="subjectCount!=5"></app-footer-component>

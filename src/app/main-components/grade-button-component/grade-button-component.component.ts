@@ -24,7 +24,7 @@ export class GradeButtonComponentComponent implements OnInit {
   subjects : string="";
   average:number=0;
   result:any;
-  
+
 
   subjectIncrement(grade:any){
     // if(this.subjectCount == this.errorMessage){
@@ -45,6 +45,8 @@ export class GradeButtonComponentComponent implements OnInit {
   reset(){
     this.subjects ="";
     this.subjectCount=0;
+    this.average=0;
+    this.result=0;
   }
 
   navToResultComponent(){
