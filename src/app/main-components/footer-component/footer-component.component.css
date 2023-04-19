@@ -1,5 +1,5 @@
 footer {
-    position: relative;
+    position: fixed;
     height: 80px;
     background-color: azure;
     bottom: 0;
